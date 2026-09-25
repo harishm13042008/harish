@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+
+{% block title %}
+Create a Comic — ComicCraft
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <p class="eyebrow">
+            TURN AN IDEA INTO A COMIC
+        </p>
+
+        <h1>
+            Your story.
+            Five panels.
+            One comic.
+        </h1>
+
+        <p class="lead">
+
+            Describe a story and ComicCraft
+            generates an outline, narration,
+            dialogue, illustrations and
+            a downloadable PDF.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<form
+    class="card form-card"
+    action="/generate"
+    method="post"
+    id="comic-form"
+>
+
+
+    <label>
+
+        Story Prompt
+
+        <textarea
+            name="story_prompt"
+            maxlength="2000"
+            required
+            placeholder="A brave fox exploring an enchanted forest..."
+        ></textarea>
+
+    </label>
+
+
+    <div class="grid">
+
+        <label>
+
+            Main Character Name
+
+            <input
+                type="text"
+                name="character_name"
+                maxlength="80"
+                required
+                placeholder="Luna"
+            >
+
+        </label>
+
+
+        <label>
+
+            Setting
+
+            <input
+                type="text"
+                name="setting"
+                maxlength="120"
+                required
+                placeholder="Enchanted forest"
+            >
+
+        </label>
+
+    </div>
+
+
+    <div class="grid">
+
+        <label>
+
+            Story Tone
+
+            <select name="tone">
+
+                <option>
+                    light-hearted
+                </option>
+
+                <option>
+                    dramatic
+                </option>
+
+                <option>
+                    poetic
+                </option>
+
+                <option>
+                    funny
+                </option>
+
+            </select>
+
+        </label>
+
+
+        <label>
+
+            Art Style
+
+            <select name="art_style">
+
+                <option>
+                    comic book
+                </option>
+
+                <option>
+                    anime
+                </option>
+
+                <option>
+                    pixel art
+                </option>
+
+                <option>
+                    realistic
+                </option>
+
+            </select>
+
+        </label>
+
+    </div>
+
+
+    <button
+        class="primary"
+        type="submit"
+        id="generate-btn"
+    >
+
+        ✨ Generate Comic
+
+    </button>
+
+
+    <p class="hint">
+
+        AI generation may take a few minutes.
+
+    </p>
+
+
+</form>
+
+{% endblock %}

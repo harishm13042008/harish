@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}ComicCraft{% endblock %}</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #201b18;
+            background: #f4efe8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #f8f4ed, #e8ded1);
+        }
+
+        main {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 40px 0 64px;
+        }
+
+        .comic-header {
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid rgba(96, 71, 57, 0.18);
+        }
+
+        .comic-header h1 {
+            margin: 0 0 8px;
+            font-size: clamp(2rem, 5vw, 4.5rem);
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+        }
+
+        .comic-header p {
+            margin: 0;
+            color: #6a5b50;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .comic-panel {
+            margin: 0 0 36px;
+            padding: clamp(14px, 2vw, 24px);
+            background: #fffdf9;
+            border: 1px solid #d8cabc;
+            box-shadow: 0 16px 34px rgb(57 40 28 / 12%);
+            border-radius: 18px;
+        }
+
+        .comic-panel h2 {
+            margin: 0 0 14px;
+            font-size: clamp(1.25rem, 2vw, 1.8rem);
+            color: #2d211d;
+        }
+
+        .panel-image-frame {
+            width: min(100%, 980px);
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #eadcc9;
+            border: 3px solid #7a5848;
+            border-radius: 12px;
+            box-shadow: inset 0 0 0 5px rgba(122, 88, 72, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .panel-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: auto;
+            background: #f6eee7;
+        }
+
+        .scene-description {
+            margin: 16px 0 0;
+            font-size: 1.08rem;
+            line-height: 1.55;
+            color: #312721;
+        }
+
+        .image-prompt {
+            margin: 12px 0 0;
+            color: #75675d;
+            font-size: 0.9rem;
+            line-height: 1.45;
+            font-style: italic;
+        }
+
+        .back-link {
+            color: #8d3f2f;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 12px;
+            text-decoration: none;
+        }
+
+        .primary {
+            display: inline-block;
+            margin: 18px 0 20px;
+            padding: 12px 20px;
+            border-radius: 999px;
+            background: #8d3f2f;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(141, 63, 47, 0.2);
+        }
+
+        .pdf-actions {
+            margin: 20px 0 24px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                width: min(100% - 20px, 1180px);
+                padding-top: 24px;
+            }
+
+            .comic-panel {
+                margin-bottom: 24px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+    {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

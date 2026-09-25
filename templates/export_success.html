@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Export Complete{% endblock %}
+
+{% block content %}
+<h1>Export complete</h1>
+{% if pdf_url %}
+<a href="{{ pdf_url }}">Download PDF</a>
+{% else %}
+<p>Your comic export is ready.</p>
+{% endif %}
+<a href="/">Create another comic</a>
+{% endblock %}

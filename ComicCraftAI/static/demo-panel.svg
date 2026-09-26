@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Comic panel preview</title>
+  <desc id="desc">A colorful illustrated comic panel placeholder for offline demo mode.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#86c8df"/>
+      <stop offset="1" stop-color="#f6d29b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="#f7efe1"/>
+  <rect x="42" y="42" width="940" height="940" rx="18" fill="url(#sky)" stroke="#242b35" stroke-width="24"/>
+  <circle cx="788" cy="230" r="86" fill="#ffd166" stroke="#242b35" stroke-width="16"/>
+  <path d="M66 680 Q240 500 410 680 T760 650 T1000 620 V970 H66 Z" fill="#4f8060" stroke="#242b35" stroke-width="18"/>
+  <path d="M66 790 Q240 630 420 790 T760 750 T1000 730 V970 H66 Z" fill="#315a4d" stroke="#242b35" stroke-width="18"/>
+  <path d="M400 820 Q512 700 624 820 V970 H400 Z" fill="#d66b4d" stroke="#242b35" stroke-width="18"/>
+  <circle cx="512" cy="595" r="92" fill="#f0b27a" stroke="#242b35" stroke-width="18"/>
+  <path d="M430 570 Q512 470 594 570" fill="none" stroke="#242b35" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="480" cy="600" r="12" fill="#242b35"/>
+  <circle cx="544" cy="600" r="12" fill="#242b35"/>
+  <path d="M480 645 Q512 670 544 645" fill="none" stroke="#242b35" stroke-width="12" stroke-linecap="round"/>
+  <path d="M420 700 Q512 770 604 700" fill="none" stroke="#242b35" stroke-width="20" stroke-linecap="round"/>
+  <rect x="110" y="110" width="330" height="84" rx="12" fill="#fff7e8" stroke="#242b35" stroke-width="12"/>
+  <text x="275" y="165" text-anchor="middle" font-family="sans-serif" font-size="32" font-weight="700" fill="#242b35">DEMO PANEL</text>
+</svg>

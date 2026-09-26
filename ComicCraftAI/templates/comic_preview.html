@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Comic Preview{% endblock %}
+
+{% block content %}
+<header class="comic-header">
+    <h1>{{ comic.character_name }}'s Comic</h1>
+    <p>{{ comic.story_prompt }}</p>
+</header>
+{% for panel in comic.panels %}
+<section class="comic-panel">
+    <h2>{{ panel.number }}. {{ panel.title }}</h2>
+    <div class="panel-image-frame">
+        <img
+            class="panel-image"
+            src="{{ panel.image_url }}"
+            alt="{{ panel.scene_description }}"
+            width="1024"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+        >
+    </div>
+    <p class="scene-description">{{ panel.scene_description }}</p>
+    <p class="image-prompt">{{ panel.image_prompt }}</p>
+</section>
+{% endfor %}
+
+{% if pdf_url %}
+<div class="pdf-actions">
+    <a class="primary" href="{{ pdf_url }}" target="_blank" download>Download PDF</a>
+</div>
+{% endif %}
+<a class="back-link" href="/">Create another comic</a>
+{% endblock %}
